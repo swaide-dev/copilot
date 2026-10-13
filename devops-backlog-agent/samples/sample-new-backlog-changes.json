@@ -1,0 +1,8 @@
+{"meta":{"project":"Greenfield HR Portal","source":"Kick-off workshop 13/10/2026","mode":"new_backlog"},"changes":[
+ {"action":"new","ref":"E1","type":"Epic","title":"Digitise leave requests","description":"When I need leave, I want to request it online so that approval is fast and tracked.","acceptance_criteria":["All leave types requested online","Paper forms retired"],"area_path":"HR Portal","iteration_path":"HR Portal"},
+ {"action":"new","ref":"F1","type":"Feature","parent":"E1","title":"Submit leave request","description":"When I plan leave, I want to submit a request so that my manager can approve it.","acceptance_criteria":["Request captures dates and leave type"]},
+ {"action":"new","ref":"P1","type":"Product Backlog Item","parent":"F1","title":"Choose leave dates on a calendar","description":"When submitting leave, I want to pick dates on a calendar so that I avoid entry errors.","acceptance_criteria":["Calendar blocks public holidays","Shows remaining balance"]},
+ {"action":"new","ref":"T1","type":"Task","parent":"P1","title":"Load public holiday calendar","description":"Load the public holiday calendar so that holidays are blocked."},
+ {"action":"new","ref":"B1","type":"Bug","parent":"F1","title":"Leave balance rounds to whole days","description":"Fix balance rounding so that half days display.","repro_steps":"1. Take half a day\n2. Balance shows 1 day used"},
+ {"action":"new","ref":"R1","type":"Risk","title":"Payroll API not ready before go-live","description":"Confirm the payroll API delivery date so that go-live isn't delayed."}
+]}

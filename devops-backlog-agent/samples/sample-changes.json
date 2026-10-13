@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "project": "Contoso Field Service",
+    "source": "Portal & Platform stand-up 13/10/2026",
+    "mode": "update"
+  },
+  "changes": [
+    {
+      "action": "update",
+      "id": 1004,
+      "state": "Done",
+      "history": "13/10/2026 stand-up: booking form finished and merged (Liam).",
+      "source": "booking form is finished and merged"
+    },
+    {
+      "action": "update",
+      "id": 1005,
+      "state": "In Progress",
+      "history": "13/10/2026 stand-up: address validation started. Blocked on vendor API key – see new impediment.",
+      "source": "Started on address validation this morning"
+    },
+    {
+      "action": "update",
+      "id": 1003,
+      "history": "13/10/2026 stand-up: demo to business accepted. Reschedule requested as a separate PBI. Stays Committed until address validation is done.",
+      "source": "demoed job booking to the business on Friday"
+    },
+    {
+      "action": "new",
+      "ref": "N1",
+      "type": "Impediment",
+      "parent": 1003,
+      "title": "Obtain address API key from vendor",
+      "description": "Obtain the address API key from the vendor so that address validation can be built and tested.",
+      "history": "Raised at 13/10/2026 stand-up. Aisha to chase vendor.",
+      "justification": "Blocks Task 1005. No existing impediment covers it.",
+      "source": "still waiting on the address API key from the vendor"
+    },
+    {
+      "action": "new",
+      "ref": "N2",
+      "type": "Product Backlog Item",
+      "parent": 1002,
+      "title": "Reschedule a booking online",
+      "description": "When my plans change, I want to reschedule my booking online so that I don't have to call the service desk.",
+      "acceptance_criteria": [
+        "Customer can pick a new available slot for an open booking",
+        "Old slot is released",
+        "Updated confirmation shown with the same job ID"
+      ],
+      "justification": "Business asked for it at the 13/10 demo. Fits Feature 1002 (Book a job online) – no existing PBI covers changing a booking.",
+      "source": "customers want to reschedule a booking without calling"
+    },
+    {
+      "action": "new",
+      "ref": "N3",
+      "type": "Task",
+      "parent": "N2",
+      "title": "Build reschedule slot picker",
+      "description": "Build the slot picker for existing bookings so that customers can choose a new time.",
+      "justification": "Breakdown of N2.",
+      "source": "Needs a date/time change"
+    },
+    {
+      "action": "new",
+      "ref": "N4",
+      "type": "Task",
+      "parent": "N2",
+      "title": "Release old slot on reschedule",
+      "description": "Release the original slot in the scheduling system so that it can be booked by others.",
+      "justification": "Breakdown of N2.",
+      "source": "a cancellation of the old slot"
+    },
+    {
+      "action": "new",
+      "ref": "N5",
+      "type": "Bug",
+      "parent": 1002,
+      "title": "Booking summary shows time in UTC",
+      "description": "Fix the booking summary time zone so that customers see their local time (AEST).",
+      "repro_steps": "1. Book a job for 9:00 am\n2. Open the booking summary\n3. Time shows 11:00 pm (UTC)",
+      "acceptance_criteria": ["Summary shows the booked time in the customer's local time zone"],
+      "tags": "Defect",
+      "justification": "Defect found in testing; belongs to Feature 1002 where the summary page sits.",
+      "source": "booking summary page shows the time in UTC"
+    },
+    {
+      "action": "update",
+      "id": 1030,
+      "state": "Closed",
+      "history": "13/10/2026 stand-up: UAT back up since Thursday – firewall rule fixed by network team.",
+      "source": "UAT environment back up since Thursday"
+    },
+    {
+      "action": "new",
+      "ref": "N6",
+      "type": "Risk",
+      "parent": 1021,
+      "title": "Azure SQL cost exceeds FY budget",
+      "description": "Reduce Azure SQL tier cost so that the migration stays within the FY budget. Estimate for Business Critical is ~40% over.",
+      "justification": "New risk raised by Sam. Directly affects Feature 1021.",
+      "source": "Cost estimate ... came back ~40% over budget"
+    },
+    {
+      "action": "remove",
+      "id": 1025,
+      "history": "Removed 13/10/2026: infra board decided the on-prem SQL server stays this FY for finance reporting. Re-raise next FY if needed.",
+      "source": "on-prem SQL server stays for the finance reporting workload this FY"
+    },
+    {
+      "action": "new",
+      "ref": "N7",
+      "type": "Feature",
+      "parent": 1020,
+      "title": "Export job data to finance warehouse",
+      "description": "Export job data nightly to the finance reporting warehouse so that finance reporting keeps working after cut-over.",
+      "acceptance_criteria": [
+        "Nightly extract of job data lands in the finance warehouse",
+        "Failed extracts alert the platform team"
+      ],
+      "justification": "No existing Feature covers reporting extracts. Sits under Epic 1020 because it is a direct consequence of the database migration.",
+      "source": "finance needs a nightly extract of job data into their reporting warehouse"
+    },
+    {
+      "action": "update",
+      "id": 1011,
+      "title": "Text customer when technician is en route",
+      "description": "When my technician is on the way, I want an SMS with their ETA so that I can be home when they arrive.",
+      "acceptance_criteria": [
+        "SMS sent when the job status changes to En route",
+        "SMS includes technician first name and ETA"
+      ],
+      "history": "13/10/2026 stand-up: Priya clarified scope – SMS on 'en route' with ETA. Title, description and AC updated.",
+      "source": "it's specifically 'text the customer when the technician is on the way', with ETA"
+    }
+  ]
+}

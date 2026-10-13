@@ -1,0 +1,69 @@
+{
+  "_comment": "Default Azure DevOps Scrum process states, plus Risk taken from the default CMMI process (Scrum has no Risk type). Edit this file if your inherited process adds or renames states.",
+  "process": "Scrum (inherited) + Risk",
+  "types": {
+    "Epic": {
+      "states": ["New", "In Progress", "Done", "Removed"],
+      "remove_state": "Removed",
+      "allowed_parents": [],
+      "requires_acceptance_criteria": true,
+      "allows_acceptance_criteria": true
+    },
+    "Feature": {
+      "states": ["New", "In Progress", "Done", "Removed"],
+      "remove_state": "Removed",
+      "allowed_parents": ["Epic"],
+      "requires_acceptance_criteria": true,
+      "allows_acceptance_criteria": true
+    },
+    "Product Backlog Item": {
+      "states": ["New", "Approved", "Committed", "Done", "Removed"],
+      "remove_state": "Removed",
+      "allowed_parents": ["Feature"],
+      "requires_acceptance_criteria": true,
+      "allows_acceptance_criteria": true
+    },
+    "Bug": {
+      "states": ["New", "Approved", "Committed", "Done", "Removed"],
+      "remove_state": "Removed",
+      "allowed_parents": ["Feature"],
+      "requires_acceptance_criteria": false,
+      "allows_acceptance_criteria": true
+    },
+    "Task": {
+      "states": ["To Do", "In Progress", "Done", "Removed"],
+      "remove_state": "Removed",
+      "allowed_parents": ["Product Backlog Item", "Bug"],
+      "requires_acceptance_criteria": false,
+      "allows_acceptance_criteria": false
+    },
+    "Impediment": {
+      "states": ["Open", "Closed"],
+      "remove_state": "Closed",
+      "allowed_parents": ["Epic", "Feature", "Product Backlog Item", "Bug", null],
+      "requires_acceptance_criteria": false,
+      "allows_acceptance_criteria": false
+    },
+    "Risk": {
+      "states": ["Proposed", "Active", "Resolved", "Closed"],
+      "remove_state": "Closed",
+      "allowed_parents": ["Epic", "Feature", "Product Backlog Item", null],
+      "requires_acceptance_criteria": false,
+      "allows_acceptance_criteria": false
+    }
+  },
+  "field_map": {
+    "description": "Description",
+    "acceptance_criteria": "Acceptance Criteria",
+    "repro_steps": "Repro Steps",
+    "area_path": "Area Path",
+    "iteration_path": "Iteration Path",
+    "tags": "Tags",
+    "priority": "Priority",
+    "effort": "Effort",
+    "assigned_to": "Assigned To"
+  },
+  "html_fields": ["Description", "Acceptance Criteria", "Repro Steps"],
+  "title_warn_length": 80,
+  "max_rows_per_csv": 1000
+}

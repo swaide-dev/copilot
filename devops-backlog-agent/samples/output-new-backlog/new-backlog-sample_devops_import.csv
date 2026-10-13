@@ -1,0 +1,7 @@
+﻿"Work Item Type","Title 1","Title 2","Title 3","Title 4","Area Path","Iteration Path","Description","Acceptance Criteria","Repro Steps","History"
+"Epic","Digitise leave requests","","","","HR Portal","HR Portal","<p>When I need leave, I want to request it online so that approval is fast and tracked.</p>","<ul><li>All leave types requested online</li><li>Paper forms retired</li></ul>","",""
+"Feature","","Submit leave request","","","HR Portal","HR Portal","<p>When I plan leave, I want to submit a request so that my manager can approve it.</p>","<ul><li>Request captures dates and leave type</li></ul>","",""
+"Product Backlog Item","","","Choose leave dates on a calendar","","HR Portal","HR Portal","<p>When submitting leave, I want to pick dates on a calendar so that I avoid entry errors.</p>","<ul><li>Calendar blocks public holidays</li><li>Shows remaining balance</li></ul>","",""
+"Task","","","","Load public holiday calendar","HR Portal","HR Portal","<p>Load the public holiday calendar so that holidays are blocked.</p>","","",""
+"Bug","","","Leave balance rounds to whole days","","HR Portal","HR Portal","<p>Fix balance rounding so that half days display.</p>","","<ol><li>Take half a day</li><li>Balance shows 1 day used</li></ol>",""
+"Risk","Payroll API not ready before go-live","","","","","","<p>Confirm the payroll API delivery date so that go-live isn't delayed.</p>","","",""

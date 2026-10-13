@@ -1,0 +1,523 @@
+{
+ "source_file": "dummy-backlog-export.xlsx",
+ "columns": [
+  "ID",
+  "Work Item Type",
+  "State",
+  "Area Path",
+  "Iteration Path",
+  "Assigned To",
+  "Tags",
+  "Description",
+  "Acceptance Criteria",
+  "Repro Steps"
+ ],
+ "title_levels": 4,
+ "has_parent_column": true,
+ "missing_recommended_columns": [],
+ "items": [
+  {
+   "id": 1001,
+   "type": "Epic",
+   "title": "Enable customer self-service",
+   "state": "In Progress",
+   "parent": null,
+   "order": 0,
+   "fields": {
+    "ID": "1001",
+    "Work Item Type": "Epic",
+    "State": "In Progress",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "Portal",
+    "Description": "<div>When a customer needs a technician, they want to book and track jobs online so that they don't have to phone the service desk.</div>",
+    "Acceptance Criteria": "<ul><li>Customers can book, track and cancel jobs online</li><li>Service desk call volume for bookings drops by 30%</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 1
+  },
+  {
+   "id": 1002,
+   "type": "Feature",
+   "title": "Book a job online",
+   "state": "In Progress",
+   "parent": 1001,
+   "order": 1,
+   "fields": {
+    "ID": "1002",
+    "Work Item Type": "Feature",
+    "State": "In Progress",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "Portal",
+    "Description": "<div>When I need a repair, I want to book a technician online so that I can choose a time that suits me.</div>",
+    "Acceptance Criteria": "<ul><li>Booking available 24/7</li><li>Booking creates a job in the scheduling system</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 2
+  },
+  {
+   "id": 1003,
+   "type": "Product Backlog Item",
+   "title": "Submit a job booking",
+   "state": "Committed",
+   "parent": 1002,
+   "order": 2,
+   "fields": {
+    "ID": "1003",
+    "Work Item Type": "Product Backlog Item",
+    "State": "Committed",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "Priya Shah <priya.shah@contoso.com>",
+    "Tags": "",
+    "Description": "<div>When I have selected a service and time, I want to submit my booking so that a technician is scheduled.</div>",
+    "Acceptance Criteria": "<ul><li>Booking saved with service, address and time slot</li><li>Job ID displayed on submit</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1004,
+   "type": "Task",
+   "title": "Build booking form",
+   "state": "In Progress",
+   "parent": 1003,
+   "order": 3,
+   "fields": {
+    "ID": "1004",
+    "Work Item Type": "Task",
+    "State": "In Progress",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "Liam Chen <liam.chen@contoso.com>",
+    "Tags": "",
+    "Description": "<div>Build the booking form UI so that customers can enter job details.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 4
+  },
+  {
+   "id": 1005,
+   "type": "Task",
+   "title": "Validate address via address API",
+   "state": "To Do",
+   "parent": 1003,
+   "order": 4,
+   "fields": {
+    "ID": "1005",
+    "Work Item Type": "Task",
+    "State": "To Do",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>Validate the entered address against the address API so that technicians get correct locations.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 4
+  },
+  {
+   "id": 1006,
+   "type": "Product Backlog Item",
+   "title": "Receive booking confirmation email",
+   "state": "New",
+   "parent": 1002,
+   "order": 5,
+   "fields": {
+    "ID": "1006",
+    "Work Item Type": "Product Backlog Item",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 15",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>When my booking is submitted, I want a confirmation email so that I have a record of the booking.</div>",
+    "Acceptance Criteria": "<ul><li>Email sent within 5 minutes of booking</li><li>Email includes job ID, date and time slot</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1007,
+   "type": "Bug",
+   "title": "Date picker allows past dates",
+   "state": "Approved",
+   "parent": 1002,
+   "order": 6,
+   "fields": {
+    "ID": "1007",
+    "Work Item Type": "Bug",
+    "State": "Approved",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "",
+    "Tags": "Defect",
+    "Description": "<div>Fix date picker validation so that customers can't book a past date.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": "<ol><li>Open booking form</li><li>Select yesterday's date</li><li>Form accepts the date</li></ol>"
+   },
+   "depth": 3
+  },
+  {
+   "id": 1008,
+   "type": "Task",
+   "title": "Add min-date validation to date picker",
+   "state": "To Do",
+   "parent": 1007,
+   "order": 7,
+   "fields": {
+    "ID": "1008",
+    "Work Item Type": "Task",
+    "State": "To Do",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>Set minimum selectable date to today so that past dates are blocked.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 4
+  },
+  {
+   "id": 1009,
+   "type": "Feature",
+   "title": "Track job status",
+   "state": "New",
+   "parent": 1001,
+   "order": 8,
+   "fields": {
+    "ID": "1009",
+    "Work Item Type": "Feature",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "Portal",
+    "Description": "<div>When I have a booked job, I want to see its status so that I know when the technician will arrive.</div>",
+    "Acceptance Criteria": "<ul><li>Status visible for all open jobs</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 2
+  },
+  {
+   "id": 1010,
+   "type": "Product Backlog Item",
+   "title": "View job status",
+   "state": "New",
+   "parent": 1009,
+   "order": 9,
+   "fields": {
+    "ID": "1010",
+    "Work Item Type": "Product Backlog Item",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 15",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>When I log in, I want to see the status of my open jobs so that I don't need to call.</div>",
+    "Acceptance Criteria": "<ul><li>Shows Booked, Scheduled, En route, Completed</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1011,
+   "type": "Product Backlog Item",
+   "title": "SMS notifications",
+   "state": "New",
+   "parent": 1009,
+   "order": 10,
+   "fields": {
+    "ID": "1011",
+    "Work Item Type": "Product Backlog Item",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1012,
+   "type": "Risk",
+   "title": "SMS vendor contract not signed",
+   "state": "Active",
+   "parent": 1009,
+   "order": 11,
+   "fields": {
+    "ID": "1012",
+    "Work Item Type": "Risk",
+    "State": "Active",
+    "Area Path": "Contoso Field Service\\Portal Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>Procurement has not signed the SMS gateway contract. SMS features can't go live without it.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1020,
+   "type": "Epic",
+   "title": "Modernise the data platform",
+   "state": "In Progress",
+   "parent": null,
+   "order": 12,
+   "fields": {
+    "ID": "1020",
+    "Work Item Type": "Epic",
+    "State": "In Progress",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "Platform",
+    "Description": "<div>Migrate the on-prem SQL Server to Azure SQL so that we reduce hosting cost and improve resilience.</div>",
+    "Acceptance Criteria": "<ul><li>All portal data served from Azure SQL</li><li>On-prem server decommissioned</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 1
+  },
+  {
+   "id": 1021,
+   "type": "Feature",
+   "title": "Migrate database to Azure SQL",
+   "state": "In Progress",
+   "parent": 1020,
+   "order": 13,
+   "fields": {
+    "ID": "1021",
+    "Work Item Type": "Feature",
+    "State": "In Progress",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "Platform",
+    "Description": "<div>Migrate the portal database to Azure SQL so that the portal runs on managed infrastructure.</div>",
+    "Acceptance Criteria": "<ul><li>Schema and data migrated with zero data loss</li><li>Portal cut over with under 1 hour downtime</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 2
+  },
+  {
+   "id": 1022,
+   "type": "Product Backlog Item",
+   "title": "Migrate reference data",
+   "state": "Committed",
+   "parent": 1021,
+   "order": 14,
+   "fields": {
+    "ID": "1022",
+    "Work Item Type": "Product Backlog Item",
+    "State": "Committed",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "Sam Okafor <sam.okafor@contoso.com>",
+    "Tags": "",
+    "Description": "<div>Migrate reference data tables to Azure SQL so that lookups work after cut-over.</div>",
+    "Acceptance Criteria": "<ul><li>Row counts match source</li><li>Lookups return identical results</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1023,
+   "type": "Task",
+   "title": "Script reference data schema",
+   "state": "Done",
+   "parent": 1022,
+   "order": 15,
+   "fields": {
+    "ID": "1023",
+    "Work Item Type": "Task",
+    "State": "Done",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "Sam Okafor <sam.okafor@contoso.com>",
+    "Tags": "",
+    "Description": "<div>Script the reference data schema so that it can be deployed repeatably.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 4
+  },
+  {
+   "id": 1024,
+   "type": "Task",
+   "title": "Run data validation",
+   "state": "To Do",
+   "parent": 1022,
+   "order": 16,
+   "fields": {
+    "ID": "1024",
+    "Work Item Type": "Task",
+    "State": "To Do",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>Run row-count and checksum validation so that data loss is detected.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 4
+  },
+  {
+   "id": 1025,
+   "type": "Product Backlog Item",
+   "title": "Decommission on-prem database server",
+   "state": "New",
+   "parent": 1021,
+   "order": 17,
+   "fields": {
+    "ID": "1025",
+    "Work Item Type": "Product Backlog Item",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>Decommission the on-prem SQL server so that hosting costs stop.</div>",
+    "Acceptance Criteria": "<ul><li>Server powered off</li><li>Backups archived</li></ul>",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1026,
+   "type": "Feature",
+   "title": "SSO",
+   "state": "New",
+   "parent": 1020,
+   "order": 18,
+   "fields": {
+    "ID": "1026",
+    "Work Item Type": "Feature",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 2
+  },
+  {
+   "id": 1027,
+   "type": "Product Backlog Item",
+   "title": "SSO stuff",
+   "state": "New",
+   "parent": 1026,
+   "order": 19,
+   "fields": {
+    "ID": "1027",
+    "Work Item Type": "Product Backlog Item",
+    "State": "New",
+    "Area Path": "Contoso Field Service\\Platform Team",
+    "Iteration Path": "Contoso Field Service",
+    "Assigned To": "",
+    "Tags": "",
+    "Description": "<div>Need to do SSO</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 3
+  },
+  {
+   "id": 1030,
+   "type": "Impediment",
+   "title": "Test environment unavailable",
+   "state": "Open",
+   "parent": null,
+   "order": 20,
+   "fields": {
+    "ID": "1030",
+    "Work Item Type": "Impediment",
+    "State": "Open",
+    "Area Path": "Contoso Field Service",
+    "Iteration Path": "Contoso Field Service\\Sprint 14",
+    "Assigned To": "",
+    "Tags": "Blocker",
+    "Description": "<div>UAT environment is down after the network change so that testing can't proceed.</div>",
+    "Acceptance Criteria": "",
+    "Repro Steps": ""
+   },
+   "depth": 1
+  }
+ ],
+ "issues": [
+  {
+   "id": 1011,
+   "severity": "warning",
+   "code": "VAGUE_TITLE",
+   "message": "Title 'SMS notifications' is vague; use verb + subject."
+  },
+  {
+   "id": 1011,
+   "severity": "warning",
+   "code": "MISSING_DESCRIPTION",
+   "message": "No description / story statement."
+  },
+  {
+   "id": 1011,
+   "severity": "warning",
+   "code": "MISSING_AC",
+   "message": "No acceptance criteria."
+  },
+  {
+   "id": 1012,
+   "severity": "info",
+   "code": "NOT_STORY_FORMAT",
+   "message": "Description has no 'so that' clause (System/Job Story format)."
+  },
+  {
+   "id": 1026,
+   "severity": "warning",
+   "code": "VAGUE_TITLE",
+   "message": "Title 'SSO' is vague; use verb + subject."
+  },
+  {
+   "id": 1026,
+   "severity": "warning",
+   "code": "MISSING_DESCRIPTION",
+   "message": "No description / story statement."
+  },
+  {
+   "id": 1026,
+   "severity": "warning",
+   "code": "MISSING_AC",
+   "message": "No acceptance criteria."
+  },
+  {
+   "id": 1027,
+   "severity": "warning",
+   "code": "VAGUE_TITLE",
+   "message": "Title 'SSO stuff' is vague; use verb + subject."
+  },
+  {
+   "id": 1027,
+   "severity": "info",
+   "code": "NOT_STORY_FORMAT",
+   "message": "Description has no 'so that' clause (System/Job Story format)."
+  },
+  {
+   "id": 1027,
+   "severity": "warning",
+   "code": "MISSING_AC",
+   "message": "No acceptance criteria."
+  }
+ ]
+}

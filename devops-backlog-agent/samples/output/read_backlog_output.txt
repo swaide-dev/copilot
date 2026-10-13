@@ -1,0 +1,36 @@
+Read 21 work items from dummy-backlog-export.xlsx -> samples/output/backlog.json
+
+OUTLINE
+1001 [Epic] Enable customer self-service (In Progress)
+  1002 [Feature] Book a job online (In Progress)
+    1003 [Product Backlog Item] Submit a job booking (Committed)
+      1004 [Task] Build booking form (In Progress)
+      1005 [Task] Validate address via address API (To Do)
+    1006 [Product Backlog Item] Receive booking confirmation email (New)
+    1007 [Bug] Date picker allows past dates (Approved)
+      1008 [Task] Add min-date validation to date picker (To Do)
+  1009 [Feature] Track job status (New)
+    1010 [Product Backlog Item] View job status (New)
+    1011 [Product Backlog Item] SMS notifications (New)
+    1012 [Risk] SMS vendor contract not signed (Active)
+1020 [Epic] Modernise the data platform (In Progress)
+  1021 [Feature] Migrate database to Azure SQL (In Progress)
+    1022 [Product Backlog Item] Migrate reference data (Committed)
+      1023 [Task] Script reference data schema (Done)
+      1024 [Task] Run data validation (To Do)
+    1025 [Product Backlog Item] Decommission on-prem database server (New)
+  1026 [Feature] SSO (New)
+    1027 [Product Backlog Item] SSO stuff (New)
+1030 [Impediment] Test environment unavailable (Open)
+
+QUALITY FINDINGS (10)
+  WARNING   1011 VAGUE_TITLE: Title 'SMS notifications' is vague; use verb + subject.
+  WARNING   1011 MISSING_DESCRIPTION: No description / story statement.
+  WARNING   1011 MISSING_AC: No acceptance criteria.
+  WARNING   1026 VAGUE_TITLE: Title 'SSO' is vague; use verb + subject.
+  WARNING   1026 MISSING_DESCRIPTION: No description / story statement.
+  WARNING   1026 MISSING_AC: No acceptance criteria.
+  WARNING   1027 VAGUE_TITLE: Title 'SSO stuff' is vague; use verb + subject.
+  WARNING   1027 MISSING_AC: No acceptance criteria.
+  INFO      1012 NOT_STORY_FORMAT: Description has no 'so that' clause (System/Job Story format).
+  INFO      1027 NOT_STORY_FORMAT: Description has no 'so that' clause (System/Job Story format).
