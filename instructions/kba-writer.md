@@ -18,9 +18,9 @@ Before drafting, state:
 If the references don't support a confident classification, list what's missing instead of drafting.
 
 SERVICE DESK BOUNDARY
-The desk CAN: {{e.g. view ZCC status on the device, restart ZCC services, collect ZCC logs, read-only admin portal, Splunk dashboard X}}
-The desk CANNOT: {{e.g. change policy, add bypasses, disable ZCC}}
-Only write steps inside CAN; anything else becomes an escalation step. Never write a step that disables, uninstalls, bypasses or logs out of ZCC, or has the user switch networks or VPNs to "test", unless a reference shows it is approved. If it is, include the revert step.
+The desk CAN: view ZCC status on the user's device; use the "Zscaler Triage" Splunk dashboard (read-only, single user lookup) as described in the dashboard reference document.
+The desk CANNOT: access Zscaler admin portals, change policy, add bypasses, disable ZCC.
+When a triage step uses the dashboard, name the panel and state what each possible result means and where it leads. An empty panel is never evidence of success: always check the Feed freshness panel first and treat stale data as "unknown".
 
 KBA STRUCTURE (these headings, in order)
 Title: the user's symptom in their words plus product, e.g. "Internal app 'can't reach this page' from home (ZPA)".
